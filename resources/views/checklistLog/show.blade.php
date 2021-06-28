@@ -67,7 +67,7 @@
                         <td>
                         <a href="{{route('checklistLogs.edit', $operationLog->id)}} "><i class="ik ik-edit-2"></i></a>
                         </td>
-                        {{-- <td><a href="{{url('/export-excel',$operationLog->id)}}">Download</a></td> --}}
+                        <td><a href="{{url('/export-excel',$operationLog->id)}}">Download</a></td>
                         <td></td>
                     </tr>
                 @endforeach

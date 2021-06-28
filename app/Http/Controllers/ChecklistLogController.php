@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use Excel;
 use App\Models\Checklist;
 use App\Models\ChecklistLog;
 use App\Models\OperationLog;
 use Illuminate\Http\Request;
 use App\Models\OpsLogBySiteView;
 use Illuminate\Support\Facades\Auth;
+use App\Exports\OpsLogViewMultiSheetExport;
 
 class ChecklistLogController extends Controller
 {
@@ -116,4 +118,9 @@ class ChecklistLogController extends Controller
         return $opsLogBySite->getOpsLog($site_id, $date);
     }
 
+    public function exportIntoExcel($id)
+    {
+        // return Excel::download(new OpsLogViewExport($id), 'opsLogViewList.xlsx');
+        return Excel::download(new OpsLogViewMultiSheetExport($id), 'opsLogViewList.xlsx');
+    }
 }

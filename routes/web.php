@@ -28,4 +28,5 @@ Route::group(['middleware'=>['auth']], function(){
     
     Route::resource('checklistLogs', ChecklistLogController::class);
     Route::post('/checklistLogs/check', [ChecklistLogController::class, 'check'])->name('checklistLog.check');
+    Route::get('/export-excel/{id}', [ChecklistLogController::class, 'exportIntoExcel']);
 });
