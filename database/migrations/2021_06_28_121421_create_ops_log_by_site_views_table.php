@@ -30,7 +30,7 @@ class CreateOpsLogBySiteViewsTable extends Migration
     {
         return <<< SQL
             create VIEW ops_log_by_site_view AS
-            select operation_logs.id, logNote, user_id, operation_logs.created_at, site_id  from operation_logs
+            select operation_logs.id, lognote, user_id, operation_logs.created_at, site_id  from operation_logs
             inner join users on operation_logs.user_id = users.id;
             SQL;
     }

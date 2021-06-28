@@ -28,7 +28,7 @@ class ChecklistLogController extends Controller
     public function store(Request $request)
     {
         $opsData = [
-            'logNote' => $request->logNote,
+            'lognote' => $request->lognote,
             'user_id' => auth()->user()->id,
         ];
         OperationLog::create($opsData);
@@ -76,10 +76,10 @@ class ChecklistLogController extends Controller
 
     public function update(Request $request, $id)
     {
-        $data = $request->logNote;
+        $data = $request->lognote;
         $checklist = OperationLog::find($id);
 
-        $checklist->logNote = $data;
+        $checklist->lognote = $data;
         $checklist->save();
         //should go to check method with date and display msg.
         // return redirect()->back()->with('message', 'Log Note updated successfully');

@@ -15,7 +15,7 @@ class CreateOperationLogsTable extends Migration
     {
         Schema::create('operation_logs', function (Blueprint $table) {
             $table->increments('id');
-            $table->longText('logNote');
+            $table->longText('lognote');
 
             $table->integer('user_id')->nullable()->unsigned();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('SET NULL');

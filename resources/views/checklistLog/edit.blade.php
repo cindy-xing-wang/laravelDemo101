@@ -31,9 +31,9 @@
             <div class="row">
                     <div class="col-md-12">
                         <label><strong>Log Note</strong></label>
-                        <textarea class="form-control @error('logNote') is-invalid @enderror" id="exampleTextarea1" rows="4" name="logNote">{{$checklist->logNote}}
+                        <textarea class="form-control @error('lognote') is-invalid @enderror" id="exampleTextarea1" rows="4" name="lognote">{{$checklist->lognote}}
                             </textarea>
-                            @error('logNote')
+                            @error('lognote')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
                         </span>

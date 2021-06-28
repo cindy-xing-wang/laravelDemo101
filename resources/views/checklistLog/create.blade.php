@@ -34,7 +34,7 @@
                 <p></p>
                 <div class="form-group">
                     <label for="exampleTextarea1">Log Note</label>
-                    <textarea class="form-control" id="exampleTextarea1" rows="4"name="logNote">{{ old('logNote') }}</textarea>
+                    <textarea class="form-control" id="exampleTextarea1" rows="4"name="lognote">{{ old('lognote') }}</textarea>
                 </div>
                 <button type="submit" class="btn btn-primary mr-2">Submit</button>
             </form>
