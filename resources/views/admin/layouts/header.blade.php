@@ -46,8 +46,15 @@
                             <div class="dropdown">
                                 <a class="dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img class="avatar" src="{{asset('template/img/user.jpg')}}" alt=""></a>
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-                                    <a class="dropdown-item" href="{{route('staffs.index')}}" class="menu-item"> <i class="ik ik-menu"></i> Staff List</a>
-                                    <a class="dropdown-item" href="{{route('staffs.create')}}" class="menu-item"><i class="ik ik-edit"></i> New Staff</a>
+                                    @if (Auth::user()->role_id==1 || Auth::user()->role_id==2)
+                                        <a class="dropdown-item" href="{{route('staffs.index')}}" class="menu-item"> <i class="ik ik-layers"></i> Staff List</a>
+                                        <a class="dropdown-item" href="{{route('staffs.create')}}" class="menu-item"><i class="ik ik-bar-chart-2"></i> New Staff</a>
+                                    @endif
+                                    <a class="dropdown-item" href="{{route('checklistLogs.create')}}" class="menu-item"><i class="ik ik-edit"></i> New Checklist</a>
+                                    @if (Auth::user()->role_id==1)
+                                        <a class="dropdown-item" href="{{route('checklists.index')}}" class="menu-item"><i class="ik ik-file-text"></i> Checklist Management</a>
+                                    @endif
+                                    <a class="dropdown-item" href="{{url('calendars')}}" class="menu-item"><i class="ik ik-calendar"></i> Calendars</a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                     onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">

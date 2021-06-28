@@ -52,6 +52,7 @@
                                         Login as Admin
                                     </button>
                                 </form>
+                                <br>
                                 <form method="POST" action="{{ route('login') }}" class="mr-2">
                                     @csrf
                                     <input hidden id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="subadmin1@gmail.com" required autocomplete="email" autofocus>

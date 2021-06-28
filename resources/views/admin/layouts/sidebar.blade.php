@@ -41,7 +41,7 @@
                     </div>
                     @if (Auth::user()->role_id==1)
                         <div class="nav-item active">
-                            <a href="{{route('checklists.index')}}"><i class="ik ik-calendar"></i></i><span>Checklist Management</span> </a>
+                            <a href="{{route('checklists.index')}}"><i class="ik ik-file-text"></i></i><span>Checklist Management</span> </a>
                         </div>
                     @endif
                     <div class="nav-item active">
