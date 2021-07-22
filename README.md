@@ -22,7 +22,8 @@ composer update
 # bash
 cp .env.example .env
 ```
-
+Go to your database and create a database.
+Update the .env file to match your database settings.
 ```
 # bash
 #Run migration to create database
