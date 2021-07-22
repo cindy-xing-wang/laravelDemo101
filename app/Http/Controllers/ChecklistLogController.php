@@ -34,7 +34,7 @@ class ChecklistLogController extends Controller
             'user_id' => auth()->user()->id,
         ];
         OperationLog::create($opsData);
-        // Find the latest procedure log created by the user
+        // Find the latest operation log created by the user
         $operationLog = OperationLog::where('user_id',  Auth::user()->id)->latest()->first();
         
         $preFlightTasks = Checklist::get();
