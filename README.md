@@ -12,7 +12,7 @@ git clone https://github.com/cindy-xing-wang/laravelDemo101.git
 # Go to the folder laravelDemo101
 cd laravelDemo101
 ```
-
+Enable "extension=gd" in C:\xampp\php\php.ini
 ```
 # bash
 composer update
@@ -46,6 +46,10 @@ php artisan db:seed --class Site
 # bash
 # Seeding data to the tables
 php artisan db:seed --class User
+```
+```
+# bash
+php artisan serve
 ```
 
 Done!
